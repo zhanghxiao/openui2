@@ -4,9 +4,13 @@
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
-    "cd ./.devcontainer ": {
-      "name": "new",
-      "command": "cd ./.devcontainer "
+    "docker build -t openui-backend .": {
+      "name": "build",
+      "command": "docker build -t openui-backend ."
+    },
+    "docker run -d -p 7878:7878 openui-backend": {
+      "name": "run",
+      "command": "docker run -d -p 7878:7878 openui-backend"
     }
   }
 }
