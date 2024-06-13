@@ -6,7 +6,8 @@
   "tasks": {
     "docker build -t openui-backend .": {
       "name": "build",
-      "command": "docker build -t openui-backend ."
+      "command": "docker build -t openui-backend .",
+      "runAtStart": true
     },
     "docker run -d -p 7878:7878 openui-backend": {
       "name": "run",
