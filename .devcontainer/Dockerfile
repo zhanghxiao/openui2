@@ -15,7 +15,8 @@ WORKDIR /app/openui/backend
 
 # 安装Python依赖
 RUN pip install .
-
+ENV OPENAI_API_KEY=sk-7fVtPShmrnceypkX26DeC811D41c4f069f424d02Ca53C91b
+ENV OPENAI_BASE_URL=https://one-api-latest-lb82.onrender.com/v1
 
 # 创建根目录数据库目录并赋予权限
 RUN mkdir -p /.openui && chmod -R 777 /.openui
